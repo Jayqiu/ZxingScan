@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/capture_preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <com.threehalf.scanner.view.ViewfinderView
+        android:id="@+id/capture_viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fl_title"
+        android:layout_height="48dp"></FrameLayout>
+</FrameLayout>
