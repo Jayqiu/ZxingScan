@@ -136,12 +136,11 @@ public abstract class CaptureActivity extends Activity implements SurfaceHolder.
 			switch (msg.what) {
 			case PARSE_BARCODE_SUC: // 解析图片成功
 
-				onAlbumDecode( msg.obj+"",PARSE_BARCODE_FAIL);
+				onAlbumDecode( msg.obj+"",PARSE_BARCODE_SUC);
 				break;
 
 			case PARSE_BARCODE_FAIL:// 解析图片失败
 				onAlbumDecode("",PARSE_BARCODE_FAIL);
-				Toast.makeText(activityReference.get(), "解析图片失败", Toast.LENGTH_SHORT).show();
 
 				break;
 
