@@ -177,7 +177,7 @@ public final class ViewfinderView extends View {
 			// 画扫描框下面的字
 			paint.setColor(textColor);
 			paint.setTextSize(TEXT_SIZE * density);
-			paint.setAlpha(0x40);
+//			paint.setAlpha(0x40);
 			paint.setTypeface(Typeface.create("System", Typeface.BOLD));
 			canvas.drawText(getResources().getString(R.string.scan_text), frame.left,
 					(float) (frame.bottom + (float) TEXT_PADDING_TOP * density), paint);

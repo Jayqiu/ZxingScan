@@ -50,8 +50,8 @@ public abstract class CaptureActivity extends Activity implements SurfaceHolder.
 
 	private static final int REQUEST_CODE = 100;
 
-	private static final int PARSE_BARCODE_FAIL = 300;
-	private static final int PARSE_BARCODE_SUC = 200;
+	public static final int PARSE_BARCODE_FAIL = 300;
+	public static final int PARSE_BARCODE_SUC = 200;
 //	private TitleBarView mTitleBarView;
 
 	/**
@@ -135,7 +135,7 @@ public abstract class CaptureActivity extends Activity implements SurfaceHolder.
 
 			switch (msg.what) {
 			case PARSE_BARCODE_SUC: // 解析图片成功
-				Toast.makeText(activityReference.get(), "解析成功，结果为：" + msg.obj, Toast.LENGTH_SHORT).show();
+
 				onAlbumDecode( msg.obj+"",PARSE_BARCODE_FAIL);
 				break;
 
@@ -507,10 +507,17 @@ public abstract class CaptureActivity extends Activity implements SurfaceHolder.
 		albumIntent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 		startActivityForResult(albumIntent, REQUEST_CODE);
 	}
+
+	/**
+	 *	扫描解析
+	 * @param resultString
+	 * @param barcode
+	 * @param scaleFactor
+	 */
 	public  abstract  void  onHandleDecode(String resultString, Bitmap barcode, float scaleFactor);
 
 	/**
-	 *
+	 *相册选择图片解析
 	 * @param resultString
 	 * @param status 200 成功 300 失败
 	 */
