@@ -1,7 +1,7 @@
 # ZxingScan
 使用Zxing实现二维码条形码的扫描和解析
 
-	![](https://github.com/Jayqiu/ZxingScan/blob/master/GIF.gif)
+![](https://github.com/Jayqiu/ZxingScan/blob/master/GIF.gif)
 # 说明
 项目没有对权限申请做处理的，下载直接运行的需要手动的开启权限
 ### 使用
