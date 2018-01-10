@@ -147,7 +147,6 @@ public abstract class CaptureActivity extends Activity implements SurfaceHolder.
 			default:
 				break;
 			}
-
 			super.handleMessage(msg);
 		}
 

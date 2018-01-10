@@ -1,5 +1,6 @@
 package com.threehalf.zxingscan;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,10 @@ public class MainActivity extends CaptureActivity {
         tvRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQRCodeForAlbum();
+//                startQRCodeForAlbum();
+                Intent intent= new Intent(MainActivity.this,CreateQRCodeActivity.class);
+                intent.putExtra("ret","12315555555555555555555555555555555555555555555555555555555555555555555555555555523");
+                startActivity(intent);
             }
         });
 
@@ -53,6 +57,7 @@ public class MainActivity extends CaptureActivity {
             case PARSE_BARCODE_SUC: // 解析图片成功
 
                 Toast.makeText(this, "解析成功，结果为：" + resultString, Toast.LENGTH_SHORT).show();
+
                 break;
 
             case PARSE_BARCODE_FAIL:// 解析图片失败
